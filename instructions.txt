@@ -32,6 +32,8 @@ Les Mocks sont des bouchons, c'est à dire des morceaux de code, qui permettent 
 
 Sources : 
 
+https://openclassrooms.com/fr/courses/4087056-testez-et-suivez-letat-de-votre-application-php
+
 https://openclassrooms.com/fr/courses/4087056-testez-et-suivez-letat-de-votre-application-php/4419446-premiers-pas-avec-phpunit-et-les-tests-unitaires
 
 
