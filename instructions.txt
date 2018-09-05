@@ -1,0 +1,40 @@
+#1 Installer les dépendances (à la racine du projet):
+composer update
+
+#2 Lancer les tests (à la racine du projet):
+vendor/bin/phpunit
+
+#3 Afficher les options de php unit
+vendor/bin/phpunit --help
+
+#4 Lancer l'application
+bin/console server:run
+
+#5 Créer une base de données SQLite
+bin/console doctrine:database:create --env=test
+
+#6 Créer des tables dans la basse de données
+bin/console doctrine:schema:create --env=test
+
+#7 sur Symfony 3 les paramètres de la base de données sont dans le fichier
+app/config/parameters/parameters.yml
+Le fichier parameters.dist.yml est le fichier de paramétrage qu'on joint pour git car le fichier parameters.yml est ignoré dan sun fichier gitignore
+
+#8 Le fichier config_test.yml est créé à la volée et contient la configuration de l'environnement de dev  créé après la commande  --env="test"
+Le web_profiler correspond à la toolbar de dev qui apparaît en bas de la page, on peut l'afficher pour l'environnement de dev e tla retirer en production
+
+
+
+
+Dans phpUnit, la méthode setUp permet de créer une instance réutilisable d'un objet ou de la base de données, la méthode tearDown permet de vider le cache après les tests unitaires.
+
+Les Mocks sont des bouchons, c'est à dire des morceaux de code, qui permettent de simuler le résultat d'un service extérieur ou d'une autre fonction dont dépend la fonction à tester.
+
+Sources : 
+
+https://openclassrooms.com/fr/courses/4087056-testez-et-suivez-letat-de-votre-application-php/4419446-premiers-pas-avec-phpunit-et-les-tests-unitaires
+
+
+https://openclassrooms.com/fr/courses/4087056-testez-et-suivez-letat-de-votre-application-php/4419441-les-doublures-mocks
+
+https://openclassrooms.com/fr/courses/4087056-testez-et-suivez-letat-de-votre-application-php/4447221-tp-tester-une-classe-contenant-de-nombreuses-dependances
